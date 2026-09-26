@@ -1,0 +1,103 @@
+.class public interface abstract Lc/f/a/a/i/l/j5;
+.super Ljava/lang/Object;
+.source ""
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+
+# virtual methods
+.method public abstract a(Ljava/lang/Object;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)I"
+        }
+    .end annotation
+.end method
+
+.method public abstract a()Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()TT;"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/Object;Lc/f/a/a/i/l/s6;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Lc/f/a/a/i/l/s6;",
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/Object;Lc/f/a/a/i/l/t2;Lc/f/a/a/i/l/a3;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Lc/f/a/a/i/l/t2;",
+            "Lc/f/a/a/i/l/a3;",
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/Object;[BIILc/f/a/a/i/l/d2;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;[BII",
+            "Lc/f/a/a/i/l/d2;",
+            ")V"
+        }
+    .end annotation
+.end method
+
+.method public abstract a(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TT;)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/Object;Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;TT;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract b(Ljava/lang/Object;)Z
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)Z"
+        }
+    .end annotation
+.end method
+
+.method public abstract c(Ljava/lang/Object;)V
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)V"
+        }
+    .end annotation
+.end method
+
+.method public abstract d(Ljava/lang/Object;)I
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;)I"
+        }
+    .end annotation
+.end method

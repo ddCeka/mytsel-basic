@@ -1,0 +1,111 @@
+.class public final Lc/f/a/a/i/k/o6;
+.super Lc/f/a/a/i/k/a5;
+.source ""
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lc/f/a/a/i/k/a5;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final varargs b(Lc/f/a/a/i/k/n3;[Lc/f/a/a/i/k/ub;)Lc/f/a/a/i/k/ub;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lc/f/a/a/i/k/n3;",
+            "[",
+            "Lc/f/a/a/i/k/ub<",
+            "*>;)",
+            "Lc/f/a/a/i/k/ub<",
+            "*>;"
+        }
+    .end annotation
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, La/b/h/a/w;->a(Z)V
+
+    array-length v1, p2
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x2
+
+    if-ne v1, v3, :cond_0
+
+    const/4 v1, 0x1
+
+    goto :goto_0
+
+    :cond_0
+    const/4 v1, 0x0
+
+    :goto_0
+    invoke-static {v1}, La/b/h/a/w;->a(Z)V
+
+    aget-object v1, p2, v2
+
+    instance-of v1, v1, Lc/f/a/a/i/k/gc;
+
+    invoke-static {v1}, La/b/h/a/w;->a(Z)V
+
+    aget-object v1, p2, v2
+
+    check-cast v1, Lc/f/a/a/i/k/gc;
+
+    iget-object v1, v1, Lc/f/a/a/i/k/gc;->b:Ljava/lang/String;
+
+    invoke-virtual {p1, v1}, Lc/f/a/a/i/k/n3;->a(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    aget-object v2, p2, v0
+
+    invoke-virtual {p1, v1, v2}, Lc/f/a/a/i/k/n3;->b(Ljava/lang/String;Lc/f/a/a/i/k/ub;)V
+
+    aget-object p1, p2, v0
+
+    return-object p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalStateException;
+
+    const-string p2, "Attempting to assign to undefined variable "
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {p2, v0}, Ljava/lang/String;->concat(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p2
+
+    goto :goto_1
+
+    :cond_2
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, p2}, Ljava/lang/String;-><init>(Ljava/lang/String;)V
+
+    move-object p2, v0
+
+    :goto_1
+    invoke-direct {p1, p2}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method

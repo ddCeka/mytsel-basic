@@ -1,0 +1,152 @@
+.class public final Lc/f/a/a/i/j/p6;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Lc/f/a/a/i/j/m6;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 1
+
+    check-cast p1, Lc/f/a/a/i/j/n6;
+
+    check-cast p2, Lc/f/a/a/i/j/n6;
+
+    invoke-virtual {p2}, Ljava/util/LinkedHashMap;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    iget-boolean v0, p1, Lc/f/a/a/i/j/n6;->b:Z
+
+    if-nez v0, :cond_0
+
+    invoke-virtual {p1}, Lc/f/a/a/i/j/n6;->a()Lc/f/a/a/i/j/n6;
+
+    move-result-object p1
+
+    :cond_0
+    invoke-virtual {p1}, Lc/f/a/a/i/j/n6;->b()V
+
+    invoke-virtual {p2}, Ljava/util/LinkedHashMap;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    invoke-virtual {p1, p2}, Lc/f/a/a/i/j/n6;->putAll(Ljava/util/Map;)V
+
+    :cond_1
+    return-object p1
+.end method
+
+.method public final a(Ljava/lang/Object;)Ljava/util/Map;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/util/Map<",
+            "**>;"
+        }
+    .end annotation
+
+    check-cast p1, Lc/f/a/a/i/j/n6;
+
+    return-object p1
+.end method
+
+.method public final b(Ljava/lang/Object;)Ljava/util/Map;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Ljava/util/Map<",
+            "**>;"
+        }
+    .end annotation
+
+    check-cast p1, Lc/f/a/a/i/j/n6;
+
+    return-object p1
+.end method
+
+.method public final c(Ljava/lang/Object;)Z
+    .locals 0
+
+    check-cast p1, Lc/f/a/a/i/j/n6;
+
+    iget-boolean p1, p1, Lc/f/a/a/i/j/n6;->b:Z
+
+    if-nez p1, :cond_0
+
+    const/4 p1, 0x1
+
+    return p1
+
+    :cond_0
+    const/4 p1, 0x0
+
+    return p1
+.end method
+
+.method public final d(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 2
+
+    move-object v0, p1
+
+    check-cast v0, Lc/f/a/a/i/j/n6;
+
+    const/4 v1, 0x0
+
+    iput-boolean v1, v0, Lc/f/a/a/i/j/n6;->b:Z
+
+    return-object p1
+.end method
+
+.method public final e(Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 0
+
+    sget-object p1, Lc/f/a/a/i/j/n6;->c:Lc/f/a/a/i/j/n6;
+
+    invoke-virtual {p1}, Lc/f/a/a/i/j/n6;->a()Lc/f/a/a/i/j/n6;
+
+    move-result-object p1
+
+    return-object p1
+.end method
+
+.method public final f(Ljava/lang/Object;)Lc/f/a/a/i/j/l6;
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Object;",
+            ")",
+            "Lc/f/a/a/i/j/l6<",
+            "**>;"
+        }
+    .end annotation
+
+    new-instance p1, Ljava/lang/NoSuchMethodError;
+
+    invoke-direct {p1}, Ljava/lang/NoSuchMethodError;-><init>()V
+
+    throw p1
+.end method

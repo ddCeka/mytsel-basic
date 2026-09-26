@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:dist="http://schemas.android.com/apk/distribution" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" android:installLocation="auto" package="com.tsel.telkomselku" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <dist:module dist:instant="true"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:smallScreens="true"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@drawable/ic_lite_app_icon" android:label="MyTelkomsel" android:name="com.tsel.telkomselku.app" android:roundIcon="@drawable/ic_lite_app_icon" android:supportsRtl="true" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <activity android:name="com.tsel.telkomselku.activity.WebMyTselWebView" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter android:label="@string/deeplink_login_label">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="@string/deeplink_host" android:pathPrefix="/web/login" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinPreferenceActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinResponseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinDashboardActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinActivationStatus" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PoinActivateNowActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PlainWebViewActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PaymentPinActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PaymentResponseActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.UpdateActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PaymentActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.PackageDetailsActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:name="com.tsel.telkomselku.activity.QuotaInformationActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:hardwareAccelerated="true" android:name="com.tsel.telkomselku.activity.DashboardActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:name="com.tsel.telkomselku.activity.Splash_Activity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.tsel.telkomselku.activity.LoginMsisdnMlActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter android:label="@string/deeplink_login_label">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="@string/deeplink_host" android:pathPrefix="/package-details" android:scheme="https"/>
+                <data android:host="@string/deeplink_host" android:pathPrefix="/notif" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:label="Login Input" android:name="com.tsel.telkomselku.activity.LoginMsisdnMlInputActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:exported="true" android:label="Login Input" android:name="com.tsel.telkomselku.activity.PoinHistoryActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity android:label="Login Input" android:name="com.tsel.telkomselku.activity.LoginMsisdnMlRedirectActivity" android:screenOrientation="portrait" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter android:label="@string/deeplink_login_label">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="@string/deeplink_host" android:pathPrefix="/app" android:scheme="https"/>
+                <data android:host="my.telkomsel.lite" android:scheme="app"/>
+            </intent-filter>
+        </activity>
+        <provider android:authorities="com.tsel.telkomselku.chuck.provider" android:exported="false" android:name="com.readystatesoftware.chuck.internal.data.ChuckContentProvider"/>
+        <activity android:label="@string/chuck_name" android:launchMode="singleTask" android:name="com.readystatesoftware.chuck.internal.ui.MainActivity" android:taskAffinity="com.readystatesoftware.chuck.task" android:theme="@style/Chuck.Theme"/>
+        <activity android:name="com.readystatesoftware.chuck.internal.ui.TransactionActivity" android:parentActivityName="com.readystatesoftware.chuck.internal.ui.MainActivity" android:theme="@style/Chuck.Theme"/>
+        <service android:exported="false" android:name="com.readystatesoftware.chuck.internal.support.ClearTransactionsService"/>
+        <provider android:authorities="com.tsel.telkomselku.lifecycle-trojan" android:exported="false" android:multiprocess="true" android:name="android.arch.lifecycle.ProcessLifecycleOwnerInitializer"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="1"/>
+    </application>
+</manifest>

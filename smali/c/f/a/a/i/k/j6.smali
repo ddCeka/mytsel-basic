@@ -1,0 +1,54 @@
+.class public final Lc/f/a/a/i/k/j6;
+.super Lc/f/a/a/i/k/a5;
+.source ""
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Lc/f/a/a/i/k/a5;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final varargs b(Lc/f/a/a/i/k/n3;[Lc/f/a/a/i/k/ub;)Lc/f/a/a/i/k/ub;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lc/f/a/a/i/k/n3;",
+            "[",
+            "Lc/f/a/a/i/k/ub<",
+            "*>;)",
+            "Lc/f/a/a/i/k/ub<",
+            "*>;"
+        }
+    .end annotation
+
+    const/4 p1, 0x1
+
+    invoke-static {p1}, La/b/h/a/w;->a(Z)V
+
+    array-length v0, p2
+
+    const/4 v1, 0x0
+
+    const/4 v2, 0x2
+
+    if-ne v0, v2, :cond_0
+
+    goto :goto_0
+
+    :cond_0
+    const/4 p1, 0x0
+
+    :goto_0
+    invoke-static {p1}, La/b/h/a/w;->a(Z)V
+
+    aget-object p1, p2, v1
+
+    return-object p1
+.end method

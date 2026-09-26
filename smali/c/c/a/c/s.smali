@@ -1,0 +1,108 @@
+.class public Lc/c/a/c/s;
+.super Ljava/lang/Object;
+.source ""
+
+# interfaces
+.implements Ld/a/a/a/p/c/o/a;
+
+
+# instance fields
+.field public final a:Ld/a/a/a/p/c/o/a;
+
+.field public final b:Ljava/util/Random;
+
+.field public final c:D
+
+
+# direct methods
+.method public constructor <init>(Ld/a/a/a/p/c/o/a;D)V
+    .locals 4
+
+    new-instance v0, Ljava/util/Random;
+
+    invoke-direct {v0}, Ljava/util/Random;-><init>()V
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    const-wide/16 v1, 0x0
+
+    cmpg-double v3, p2, v1
+
+    if-ltz v3, :cond_1
+
+    const-wide/high16 v1, 0x3ff0000000000000L    # 1.0
+
+    cmpl-double v3, p2, v1
+
+    if-gtz v3, :cond_1
+
+    if-eqz p1, :cond_0
+
+    iput-object p1, p0, Lc/c/a/c/s;->a:Ld/a/a/a/p/c/o/a;
+
+    iput-wide p2, p0, Lc/c/a/c/s;->c:D
+
+    iput-object v0, p0, Lc/c/a/c/s;->b:Ljava/util/Random;
+
+    return-void
+
+    :cond_0
+    new-instance p1, Ljava/lang/NullPointerException;
+
+    const-string p2, "backoff must not be null"
+
+    invoke-direct {p1, p2}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+
+    :cond_1
+    new-instance p1, Ljava/lang/IllegalArgumentException;
+
+    const-string p2, "jitterPercent must be between 0.0 and 1.0"
+
+    invoke-direct {p1, p2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p1
+.end method
+
+
+# virtual methods
+.method public a(I)J
+    .locals 6
+
+    iget-wide v0, p0, Lc/c/a/c/s;->c:D
+
+    const-wide/high16 v2, 0x3ff0000000000000L    # 1.0
+
+    sub-double v4, v2, v0
+
+    add-double/2addr v0, v2
+
+    iget-object v2, p0, Lc/c/a/c/s;->b:Ljava/util/Random;
+
+    invoke-virtual {v2}, Ljava/util/Random;->nextDouble()D
+
+    move-result-wide v2
+
+    sub-double/2addr v0, v4
+
+    mul-double v0, v0, v2
+
+    add-double/2addr v0, v4
+
+    iget-object v2, p0, Lc/c/a/c/s;->a:Ld/a/a/a/p/c/o/a;
+
+    invoke-interface {v2, p1}, Ld/a/a/a/p/c/o/a;->a(I)J
+
+    move-result-wide v2
+
+    long-to-double v2, v2
+
+    invoke-static {v2, v3}, Ljava/lang/Double;->isNaN(D)Z
+
+    mul-double v0, v0, v2
+
+    double-to-long v0, v0
+
+    return-wide v0
+.end method
