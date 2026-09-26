@@ -3,3 +3,5 @@
 /res
 /unknown
 *.apk
+.nomedia
+.nosearch
